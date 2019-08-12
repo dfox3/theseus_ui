@@ -69,7 +69,7 @@ Plate displays preloaded wells w/ reagents colorized. This is currently a static
  - tools screen
 
 
-### Info:
+## Info:
 
 **20190812**
 
