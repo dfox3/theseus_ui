@@ -18,12 +18,12 @@ Needed:
  - Python 3.7.X (latest version)
     - pip installed with
         - [PyQt5](https://pypi.org/project/PyQt5/)
+        - For more information on how to pip install, visit [this guide](https://packaging.python.org/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line) for more information.
 
-For more information on how to pip install, visit [this guide](https://packaging.python.org/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line) for more information.
 
- - other imports from [The Python Standard Library](https://docs.python.org/2/library/) (typically pre-installed):
-    - [functools](https://docs.python.org/2/library/functools.html)
-    - [time](https://docs.python.org/2/library/time.html)
+     - other imports from [The Python Standard Library](https://docs.python.org/2/library/) (typically pre-installed):
+        - [functools](https://docs.python.org/2/library/functools.html)
+        - [time](https://docs.python.org/2/library/time.html)
 
 ## Use:
 
