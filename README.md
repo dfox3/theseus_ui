@@ -13,10 +13,11 @@ Alternatively, you can download the zip from [the current repo](https://github.c
 ## Requirements
 
 These scripts are not packaged and standalone executable at this stage. 
-Windows cmd line
-Python 3.7.X (latest version)
- - pip installed with
-    - [PyQt5](https://pypi.org/project/PyQt5/)
+Needed:
+ - Windows cmd line
+ - Python 3.7.X (latest version)
+    - pip installed with
+        - [PyQt5](https://pypi.org/project/PyQt5/)
 
 For more information on how to pip install, visit [this guide](https://packaging.python.org/tutorials/installing-packages/#ensure-you-can-run-pip-from-the-command-line) for more information.
 
