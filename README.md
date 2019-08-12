@@ -67,6 +67,9 @@ Plate displays preloaded wells w/ reagents colorized. This is currently a static
  - run screen and run timer
  - view results screen
  - tools screen
+ - connection to barcoded sample system
+ - connection to library prep apps
+ - connection to Theseus
 
 
 ## Info:
