@@ -70,6 +70,7 @@ Plate displays preloaded wells w/ reagents colorized. This is currently a static
  - connection to barcoded sample system
  - connection to library prep apps
  - connection to Theseus
+ - standalone executable
 
 
 ## Info:
