@@ -12,7 +12,7 @@ Alternatively, you can download the zip from [the current repo](https://github.c
 
 ## Requirements
 
-These scripts are not packaged and standalone executable at this stage. 
+These scripts are not packaged and are not standalone executable at this stage. 
 Needed:
  - Windows cmd line
  - Python 3.7.X (latest version)
@@ -27,7 +27,7 @@ Needed:
 
 ## Use:
 
-Navigate to working "theseus_ui" directory via Windows cmd.
+Navigate to the working "theseus_ui" directory via Windows cmd.
 Execute python script.
 
 ```
