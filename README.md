@@ -56,7 +56,7 @@ Click the timer and wait. Timer set for 5 secs for testing.
 ![screen7](screenshots/20190812/screen7.png)
 
 Plate displays preloaded wells w/ reagents colorized. This is currently a static image, but ideally these will be generated on a Library to Library basis. This currently moves to the next screen after all wells are clicked. I question the function of these clickable wells at the moment - needs clarification.
-![screen8](screenshots/20190812/screen8.png)
+![screen9](screenshots/20190812/screen9.png)
 
 
 ### Not yet developed:
