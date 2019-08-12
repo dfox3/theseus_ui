@@ -22,8 +22,8 @@ Needed:
 
 
      - other imports from [The Python Standard Library](https://docs.python.org/2/library/) (typically pre-installed):
-        - [functools](https://docs.python.org/2/library/functools.html)
-        - [time](https://docs.python.org/2/library/time.html)
+        - [functools](https://docs.python.org/3/library/functools.html)
+        - [time](https://docs.python.org/3/library/time.html)
 
 ## Use:
 
