@@ -32,6 +32,18 @@ GREYED_STYLE = "QPushButton { border-style: outset;\
                            QPushButton:pressed { background-color: #CACACA;\
                                                  border-style: inset;\
                                                  border-color: gray}"
+SMALL_GREYED_STYLE = "QPushButton { border-style: outset;\
+                                         border-width: 1px;\
+                                         border-radius: 7px;\
+                                         border-color: #363636;\
+                                         padding: 4px;\
+                                         font-size: 14px;\
+                                         color: #1F1F1F;\
+                                         background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #E9E9E9, stop:0.7 #CACACA, stop:1 #D5D5D5)}\
+                           QPushButton:pressed { background-color: #CACACA;\
+                                                 border-style: inset;\
+                                                 border-color: gray}"
+
 GREEN_STYLE = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
                                          border-radius: 7px;\
@@ -584,14 +596,62 @@ class Window(QMainWindow):
         self.reagent_button_shell.setGeometry(QRect(37+self.home_margins*2,20,40,40))
         self.reagent_button_shell.setDisabled(True)
 
+        self.plate_label = QLabel(self.lib_widget3)
+        self.plate_label.setText("Load 10uL DNA (A1, C1, E1, G1, I1, K1, M1, O1).")
+        self.plate_label.setGeometry(QRect(37,80,680,20))
+        self.plate_label.setStyleSheet(LABELS)
+
         self.label = QLabel(self.lib_widget3)
         self.label.setPixmap(QPixmap(self.plate_name))
         self.label.setGeometry(QRect(37,100,680,468))
         self.label.setToolTip("Reagent plate map")
 
+        self.a1_button = QPushButton("",self.lib_widget3)
+        self.a1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.a1_button.setGeometry(QRect(self.home_margins+31,135,20,20))
+        self.a1_button.clicked.connect(partial(self.clickPlateButton,0))
 
+        self.c1_button = QPushButton("",self.lib_widget3)
+        self.c1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.c1_button.setGeometry(QRect(self.home_margins+31,185,20,20))
+        self.c1_button.clicked.connect(partial(self.clickPlateButton,1))
 
+        self.e1_button = QPushButton("",self.lib_widget3)
+        self.e1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.e1_button.setGeometry(QRect(self.home_margins+31,235,20,20))
+        self.e1_button.clicked.connect(partial(self.clickPlateButton,2))
 
+        self.g1_button = QPushButton("",self.lib_widget3)
+        self.g1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.g1_button.setGeometry(QRect(self.home_margins+31,285,20,20))
+        self.g1_button.clicked.connect(partial(self.clickPlateButton,3))
+
+        self.i1_button = QPushButton("",self.lib_widget3)
+        self.i1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.i1_button.setGeometry(QRect(self.home_margins+31,335,20,20))
+        self.i1_button.clicked.connect(partial(self.clickPlateButton,4))
+
+        self.k1_button = QPushButton("",self.lib_widget3)
+        self.k1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.k1_button.setGeometry(QRect(self.home_margins+31,385,20,20))
+        self.k1_button.clicked.connect(partial(self.clickPlateButton,5))
+
+        self.m1_button = QPushButton("",self.lib_widget3)
+        self.m1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.m1_button.setGeometry(QRect(self.home_margins+31,435,20,20))
+        self.m1_button.clicked.connect(partial(self.clickPlateButton,6))
+
+        self.o1_button = QPushButton("",self.lib_widget3)
+        self.o1_button.setStyleSheet(SMALL_GREYED_STYLE)
+        self.o1_button.setGeometry(QRect(self.home_margins+31,485,20,20))
+        self.o1_button.clicked.connect(partial(self.clickPlateButton,7))
+        
+        #-----------------------------------------------
+        # widget4
+        self.lib_widget4 = QWidget(self)
+        self.lib_widget4.hide()
+        self.lib_widget4.setGeometry(self.left+121,100, self.width, self.height-150)
+        self.lib_widget4.setStyleSheet(self.widget_style2)
 
 
 
@@ -605,8 +665,10 @@ class Window(QMainWindow):
             self.lib_widget2.show()
         if self.combo_box2.currentText() == "Genomic DNA":
             self.light_state2 = BLUE_LIGHT_STYLE
+            self.plate_label.setText("Load 10uL Genomic DNA (A1, C1, E1, G1, I1, K1, M1, O1).")
         else:
             self.light_state2 = RED_LIGHT_STYLE
+            self.plate_label.setText("Load 10uL Blood (A1, C1, E1, G1, I1, K1, M1, O1).")
         self.lib_light1.setStyleSheet(self.light_state1)
         self.lib_light2.setStyleSheet(self.light_state2)
         self.resetWidget2()
@@ -676,20 +738,31 @@ class Window(QMainWindow):
             self.timer_button.setDisabled(True)
             self.ticker()
 
+    def clickPlateButton(self, button):
+        button_list = [self.a1_button,
+                       self.c1_button,
+                       self.e1_button,
+                       self.g1_button,
+                       self.i1_button,
+                       self.k1_button,
+                       self.m1_button,
+                       self.o1_button]
+        if button_list[button].text() == "":
+            button_list[button].setText(u'\u2713')
+        else:
+            button_list[button].setText("")
 
-            #Add line for check mark
-            #self.reagent_button_style = [YELLOW_STYLE, YELLOW_LABELS]
-            #self.reagent_button.setStyleSheet(self.reagent_button_style[0])
-            #self.reagent_button_label.setStyleSheet(self.reagent_button_style[1])
-            #self.reagent_button.setDisabled(False)
-        
-        #elif current_step == TIMER:
-            #print("Timer is set")
-            #self.sampleType()
+        is_all_checked = True
+        i = 0
+        while is_all_checked and i < 8:
+            if button_list[i].text() == "":
+                is_all_checked = False
+            i += 1
 
-    #self.timer = QtCore.QTimer(self)
-    #self.timer.timeout.connect(self.ticker)
-    #self.timer.start(self.time)
+        if is_all_checked:
+            self.lib_widget4.hide()
+            self.lib_widget4.show()
+
 
     def ticker(self):
         self.my_qtimer.start(1000)
@@ -734,6 +807,7 @@ class Window(QMainWindow):
         self.resetWidget1()
         self.resetWidget2()
         self.resetWidget3()
+        self.resetWidget4()
 
     def question(self):
         print("question")
@@ -748,6 +822,7 @@ class Window(QMainWindow):
         self.combo_box2.setStyleSheet(DROPDOWN)
         self.lib_widget2.hide()
         self.lib_widget3.hide()
+        self.lib_widget4.hide()
 
     def resetWidget2(self):
         print("resetting 2")
@@ -776,7 +851,21 @@ class Window(QMainWindow):
 
     def resetWidget3(self):
         print("resetting 3")
-        
+        self.plate_label.setText("Load 10uL DNA (A1, C1, E1, G1, I1, K1, M1, O1).")
+        button_list = [self.a1_button,
+                       self.c1_button,
+                       self.e1_button,
+                       self.g1_button,
+                       self.i1_button,
+                       self.k1_button,
+                       self.m1_button,
+                       self.o1_button]
+        for b in button_list:
+            b.setText("")
+    
+    def resetWidget4(self):
+        print("resetting 3")
+     
     
     def getTime(self):
         minutes = self.time // 60
