@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication, QPushButton, QLabel, QButtonGroup, QHBoxLayout, QLabel
+from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication, QPushButton, QLabel, QButtonGroup, QHBoxLayout, QLabel, QMessageBox
 from PyQt5 import QtGui, QtWidgets, QtCore
 from PyQt5.QtGui import QImage, QPixmap, QColor
 from PyQt5.QtCore import QRect, QSize, Qt
@@ -54,7 +54,7 @@ GREYED_STYLE_UNCLICK = "QPushButton { border-style: outset;\
                                                  border-color: gray}"
 GREYED_STYLE_SMALL_FONT = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 16px;\
@@ -65,7 +65,7 @@ GREYED_STYLE_SMALL_FONT = "QPushButton { border-style: outset;\
                                                  border-color: gray}"
 GREYED_STYLE_UNCLICK_SMALL_FONT = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 16px;\
@@ -76,7 +76,7 @@ GREYED_STYLE_UNCLICK_SMALL_FONT = "QPushButton { border-style: outset;\
                                                  border-color: gray}"
 SMALL_GREYED_STYLE = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 14px;\
@@ -121,7 +121,7 @@ RED_STYLE = "QPushButton {  border-style: outset;\
                                                       border-color: gray}"
 RED_STYLE_SMALL_FONT = "QPushButton {  border-style: outset;\
                                              border-width: 1px;\
-                                             border-radius: 7px;\
+                                             border-radius: 3px;\
                                              border-color: #363636;\
                                              padding: 4px;\
                                              font-size: 16px;\
@@ -132,7 +132,7 @@ RED_STYLE_SMALL_FONT = "QPushButton {  border-style: outset;\
                                                       border-color: gray}"
 BG_STYLE_SMALL_FONT = "QPushButton {  border-style: outset;\
                                              border-width: 1px;\
-                                             border-radius: 7px;\
+                                             border-radius: 3px;\
                                              border-color: #363636;\
                                              padding: 4px;\
                                              font-size: 16px;\
@@ -419,7 +419,7 @@ class Window(QMainWindow):
 
         self.barcode_button_style = [GREEN_STYLE, GREEN_LABELS]
         self.cartridge_button_style = [GREYED_STYLE, GREY_LABELS]
-        self.reagent_button_style = [GREYED_STYLE, GREY_LABELS]
+        self.reagent_button_style = [GREYED_STYLE_UNCLICK, GREY_LABELS]
 
         
         self.time = WAIT
@@ -922,7 +922,15 @@ class Window(QMainWindow):
 
 
     def ticker(self):
-        self.my_qtimer.start(1000)
+        self.timer_box = QMessageBox()
+        self.timer_box.setIcon(QMessageBox.Question)
+        self.timer_box.setText("Are you sure you want to start timer?")
+        self.timer_box.setWindowTitle("Start timer")
+        self.timer_box.setStandardButtons(QMessageBox.Yes | QMessageBox.Cancel)
+        #self.reset_box.buttonClicked.connect(msgButtonClick)
+        ret_val = self.timer_box.exec()
+        if ret_val == QMessageBox.Yes:
+            self.my_qtimer.start(1000)
 
 
     def timerTimeout(self):
@@ -940,7 +948,16 @@ class Window(QMainWindow):
         print("we back here")
 
     def run(self):
-        print("run app!!")
+        self.run_box = QMessageBox()
+        self.run_box.setIcon(QMessageBox.Question)
+        self.run_box.setText("Are you sure you want to run application?")
+        self.run_box.setWindowTitle("Run application")
+        self.run_box.setStandardButtons(QMessageBox.Yes | QMessageBox.Cancel)
+        #self.reset_box.buttonClicked.connect(msgButtonClick)
+        ret_val = self.run_box.exec()
+        if ret_val == QMessageBox.Yes:
+            print("run app!!")
+            self.reset_button.setText("Stop")
 
 
     def viewResults(self):
@@ -951,25 +968,30 @@ class Window(QMainWindow):
         print("tools")
         self.lib_elements_off()
 
-
-    def lib_elements_on(self):
-        self.lib_button1.show()
-        self.lib_button2.show()
-        self.lib_button3.show()
-        self.lib_label1.show()
-        self.lib_label2.show()
-        self.lib_label3.show()
-
-
-    def lib_elements_off(self):
-        self.lib_button1.hide()
-        self.lib_button2.hide()
-        self.lib_button3.hide()
-
     def reset(self):
-        self.resetWidget1()
-        self.resetWidget2()
-        self.resetWidget3()
+        if self.reset_button.text() == "Reset":
+            self.reset_box = QMessageBox()
+            self.reset_box.setIcon(QMessageBox.Warning)
+            self.reset_box.setText("Are you sure you would like to reset \nthe Make Libraries function?")
+            self.reset_box.setWindowTitle("Reset button clicked")
+            self.reset_box.setStandardButtons(QMessageBox.Yes | QMessageBox.Cancel)
+            #self.reset_box.buttonClicked.connect(msgButtonClick)
+            ret_val = self.reset_box.exec()
+            if ret_val == QMessageBox.Yes:
+                print('Yes clicked')
+                self.resetWidget1()
+        else:
+            self.reset_box = QMessageBox()
+            self.reset_box.setIcon(QMessageBox.Warning)
+            self.reset_box.setText("Are you sure you would like to stop \nthe Theseus run?")
+            self.reset_box.setWindowTitle("Stop button clicked")
+            self.reset_box.setStandardButtons(QMessageBox.Yes | QMessageBox.Cancel)
+            #self.reset_box.buttonClicked.connect(msgButtonClick)
+            ret_val = self.reset_box.exec()
+            if ret_val == QMessageBox.Yes:
+                print('Yes clicked')
+                self.resetWidget1()
+
 
     def question(self):
         print("question")
@@ -984,6 +1006,7 @@ class Window(QMainWindow):
         self.combo_box2.setStyleSheet(DROPDOWN)
         self.lib_widget2.hide()
         #self.forward_backward_widget.hide()
+        self.reset_button.setText("Reset")
         self.resetWidget2()
         self.resetWidget3()
 
@@ -993,7 +1016,7 @@ class Window(QMainWindow):
         
         self.barcode_button_style = [GREEN_STYLE, GREEN_LABELS]
         self.cartridge_button_style = [GREYED_STYLE, GREY_LABELS]
-        self.reagent_button_style = [GREYED_STYLE, GREY_LABELS]
+        self.reagent_button_style = [GREYED_STYLE_UNCLICK, GREY_LABELS]
         
         self.barcode_button.setText("")
         self.barcode_button.setDisabled(False)

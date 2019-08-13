@@ -65,10 +65,8 @@ Currently, when all wells are checked on the previous screen, a spreadsheet appe
 ![screen10](screenshots/20190813/screen10.png)
 
 ### Not yet developed:
- - Reset prompt
  - ? button help prompt
  - dynamic plate diagram
- - run button prompt
  - run timer
  - view results screen
  - tools screen
