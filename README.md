@@ -68,11 +68,15 @@ Currently, when all wells are checked on the previous screen, a spreadsheet appe
  - dynamic plate diagram
  - run timer
  - view results screen
+    - spreadsheet displayed w/ output concentrations
+    - export to csv function
  - tools screen
  - connection to barcoded sample system
  - connection to library prep apps
  - connection to Theseus
  - standalone executable
+ - middle packages for app scientists
+    - directory structure for easy inclusion of newly developed apps
 
 
 ## Info:
