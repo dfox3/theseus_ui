@@ -5,7 +5,6 @@ from PyQt5.QtGui import QImage, QPixmap, QColor
 from PyQt5.QtCore import QRect, QSize, Qt
 from PyQt5.QtWidgets import QTableWidget, QTableWidgetItem
 from functools import partial
-from time import sleep
 import datetime
 
 MAKE_LIBRARIES = 1
@@ -503,39 +502,39 @@ class Window(QMainWindow):
                         self.lib_widget2.show()
             else:
                 self.make_button.setStyleSheet(self.home_styles[MAKE_LIBRARIES-1])
-                self.viewResults_button.setStyleSheet(self.home_styles[viewResults_RESULTS-1])
-                self.tools_button.setStyleSheet(self.home_styles[tools-1])
+                self.viewResults_button.setStyleSheet(self.home_styles[RESULTS-1])
+                self.tools_button.setStyleSheet(self.home_styles[TOOLS-1])
                 self.viewResults_button.setDisabled(False)
                 self.tools_button.setDisabled(False)
                 self.lib_widget1.hide()
                 self.lib_widget2.hide()
                 self.lib_widget3.hide()
             #self.Library()
-        elif current_pane == viewResults_RESULTS:
+        elif current_pane == RESULTS:
             if self.viewResults_button.isEnabled():
                 self.make_button.setStyleSheet(self.greyed_style)
-                self.viewResults_button.setStyleSheet(self.home_styles[viewResults_RESULTS-1])
+                self.viewResults_button.setStyleSheet(self.home_styles[RESULTS-1])
                 self.tools_button.setStyleSheet(self.greyed_circle_style)
                 self.make_button.setDisabled(True)
                 self.tools_button.setDisabled(True)
             else:
                 self.make_button.setStyleSheet(self.home_styles[MAKE_LIBRARIES-1])
-                self.viewResults_button.setStyleSheet(self.home_styles[viewResults_RESULTS-1])
-                self.tools_button.setStyleSheet(self.home_styles[tools-1])
+                self.viewResults_button.setStyleSheet(self.home_styles[RESULTS-1])
+                self.tools_button.setStyleSheet(self.home_styles[TOOLS-1])
                 self.make_button.setDisabled(False)
                 self.tools_button.setDisabled(False)
             self.viewResults()
-        elif current_pane == tools:
+        elif current_pane == TOOLS:
             if self.viewResults_button.isEnabled():
                 self.make_button.setStyleSheet(self.greyed_style)
                 self.viewResults_button.setStyleSheet(self.greyed_style)
-                self.tools_button.setStyleSheet(self.home_styles[tools-1])
+                self.tools_button.setStyleSheet(self.home_styles[TOOLS-1])
                 self.make_button.setDisabled(True)
                 self.viewResults_button.setDisabled(True)
             else:
                 self.make_button.setStyleSheet(self.home_styles[MAKE_LIBRARIES-1])
-                self.viewResults_button.setStyleSheet(self.home_styles[viewResults_RESULTS-1])
-                self.tools_button.setStyleSheet(self.home_styles[tools-1])
+                self.viewResults_button.setStyleSheet(self.home_styles[RESULTS-1])
+                self.tools_button.setStyleSheet(self.home_styles[TOOLS-1])
                 self.make_button.setDisabled(False)
                 self.viewResults_button.setDisabled(False)
             self.tools()
