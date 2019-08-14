@@ -70,7 +70,7 @@ Currently, when all wells are checked on the previous screen, a spreadsheet appe
 
 
 ### Middle package for app scientists
-Here are a tenative functions an app scientist could use to build app scripts. Aspirating and dispensing pipettes are tenatively developed, and we need calibration of global variables on a real Theseus. The most important method is "addCommand" which will writes commands to a text file that will be sent off to the embeded listener. 
+Here are a tentative functions an app scientist could use to build app scripts. Aspirating and dispensing pipettes are as developed as they can be at the moment, and we need calibration of global variables on a real Theseus. The most important method is "addCommand" which will writes commands to a text file that will be sent off to the embeded listener. 
 ![screen1](screenshots/20190814/screen1.png)
 
 
@@ -92,7 +92,7 @@ Here are a tenative functions an app scientist could use to build app scripts. A
  - standalone executable
 
 ### Middle package for app scientists
- - get static, global variable for various motor units
+ - get static, global variables for various motor units
  - pipetteMix
  - ejectTips
  - newTips
