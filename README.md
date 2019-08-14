@@ -24,6 +24,9 @@ Needed:
      - other imports from [The Python Standard Library](https://docs.python.org/2/library/) (typically pre-installed):
         - [functools](https://docs.python.org/3/library/functools.html)
         - [datetime](https://docs.python.org/3/library/datetime.html)
+        - [time](https://docs.python.org/3/library/time.html)
+        - [csv](https://docs.python.org/3/library/csv.html)
+        - [pickle](https://docs.python.org/3/library/pickle.html)
 
 ## Use:
 
@@ -36,6 +39,7 @@ python theseus_ui.py
 
 ## Status
 
+### GUI related
 This is the opening screen of the software when launched. There are 3 buttons to choose from.
 ![screen1](screenshots/20190813/screen1.png)
 
@@ -63,20 +67,42 @@ Currently, when all wells are checked on the previous screen, a spreadsheet appe
 
 ![screen10](screenshots/20190813/screen10.png)
 
-### Not yet developed:
+
+
+### Middle package for app scientists
+Here are a tenative functions an app scientist could use to build app scripts. Aspirating and dispensing pipettes are tenatively developed, and we need calibration of global variables on a real Theseus. The most important method is "addCommand" which will writes commands to a text file that will be sent off to the embeded listener. 
+![screen1](screenshots/20190814/screen1.png)
+
+
+
+## Not yet developed:
+### GUI related
  - ? button help prompt
  - dynamic plate diagram
- - run timer
+ - run progress bar
  - view results screen
     - spreadsheet displayed w/ output concentrations
     - export to csv function
  - tools screen
  - connection to barcoded sample system
  - connection to library prep apps
+    - send commands
+    - interpret embedded commands
  - connection to Theseus
  - standalone executable
- - middle packages for app scientists
-    - directory structure for easy inclusion of newly developed apps
+
+### Middle package for app scientists
+ - get static, global variable for various motor units
+ - pipetteMix
+ - ejectTips
+ - newTips
+ - incubate
+ - thermalCycle
+ - separateBeads
+ - volumeToPumpUnits
+ - mmToUnits
+ - clearCommands
+ - addCommand
 
 
 ## Info:
