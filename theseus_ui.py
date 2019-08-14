@@ -390,9 +390,9 @@ class Window(QMainWindow):
         self.left = 100
         self.width = 1000
         self.height = 750 
-        self.icon_name = "icon.png"
-        self.logo_name = "logo2.png"
-        self.plate_name = "plate.png"
+        self.icon_name = "img/icon.png"
+        self.logo_name = "img/logo2.png"
+        self.plate_name = "img/plate.png"
 
         self.style = "background-color: #1F1F1F"
         self.widget_style = "background-color: #1F1F1F; border: 1px solid gray; border-radius: 3px; color: white; font: 12px"
