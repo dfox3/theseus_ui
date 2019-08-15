@@ -14,7 +14,6 @@ Alternatively, you can download the zip from [the current repo](https://github.c
 
 These scripts are not packaged and are not standalone executable at this stage. 
 Needed:
- - Windows cmd line
  - Python 3.7.X (latest version)
     - pip installed with
         - [PyQt5](https://pypi.org/project/PyQt5/)
@@ -29,7 +28,10 @@ Needed:
         - [pickle](https://docs.python.org/3/library/pickle.html)
 
 ## Use:
+### Standalone Executable
+Double click on theseus_ui.exe
 
+### cmd line
 Navigate to the working "theseus_ui" directory via Windows cmd.
 Execute python script.
 
@@ -89,7 +91,6 @@ Here are a tentative functions an app scientist could use to build app scripts. 
     - send commands
     - interpret embedded commands
  - connection to Theseus
- - standalone executable
 
 ### Middle package for app scientists
  - get static, global variables for various motor units
@@ -101,13 +102,11 @@ Here are a tentative functions an app scientist could use to build app scripts. 
  - separateBeads
  - volumeToPumpUnits
  - mmToUnits
- - clearCommands
- - addCommand
 
 
 ## Info:
 
-**20190814**
+**20190815**
 
 **Dylan Fox**
 

@@ -181,6 +181,9 @@ def moveToWell(column, plate_type):
         exit()
     return
 
+def moveVolumeToTEC():
+    print("not yet implemented")
+
 
 def airAspirate(aspirate_volume):
     addCommand("motors_set_position",["zaxis",PIPETTE_WELL_MAX+200])
@@ -188,7 +191,7 @@ def airAspirate(aspirate_volume):
     return
 
 
-def pipetteMix(volume=0,num_despenses=0,height=0,final_dispense_height=None,column=0,plate_type="plate",z_speed=Z_SPEED):
+def pipetteMix(volume=0, num_despenses=0, aspirate_height=0, dispense_height=0, final_dispense_height=None, column=0, plate_type="plate", z_speed=Z_SPEED):
     print("not yet implemented")
 
 def ejectTips():
@@ -197,57 +200,86 @@ def ejectTips():
 def newTips(column=0):
     print("not yet implemented")
 
-def incubate(temp=0,seconds=0):
+def incubate(temp=0, seconds=0):
     print("not yet implemented")
 
-def thermalCycle(cycles=0,step_temps=[],step_times=[]):
+def thermalCycle(cycles=0, step_temps=[], step_times=[]):
     print("not yet implemented")
 
 def separateBeads():
     print("not yet implemented")
 
 def wait(seconds=0):
-    time.sleep(seconds)
+    time.sleep(seconds) # will need to have waits on the cmd.txt end 
     return
 
-def getSeconds(hours=0,minutes=0,seconds=0):
+def getSeconds(hours=0, minutes=0, seconds=0):
     return (hours * 60 * 60) + (minutes * 60) + seconds
     
 def volumeToPumpUnits(volume):
-    print("not yet implemented")
+    return volume # change when actual conversion is known
 
 def mmToUnits(mm):
-    print("not yet implemented")
+    return mm # change when actual conversion is known
 
 def clearCommands():
-    print("not yet implemented")
+    file_name = "cmd.txt"
+    with open(file_name, 'w'): pass
+    return
 
 def addCommand(cmd,args):
-    print("not yet implemented")
-    '''
-    
+    # assertions for cmd and args being formatted correctly
+    # asserting cmd exists
+    if cmd in CMDS or cmd in OTHER_CMDS:
+        pass
+    else:
+        print("Attempted to add cmd to cmd.txt via an \"addCommand\" call that does not exist.")
+        exit()
+    if cmd in CMDS and cmd not in OTHER_CMDS:
+        # asserting number of args is correct with associated cmd
+        expected_args = CMDS[cmd]
+        if len(expected_args) == len(args):
+            pass
+        else:
+            print("Number of arguments specified in an \"addCommand\" call not correct. Expected " + str(len(expected_args)) + " but recieved " + str(len(args)) +".")
+            exit()
+        # asserting args types are correct
+        for b, a in enumerate(args):
+            if expected_args[b] == 'float' and (isinstance(a, float) or isinstance(a, int)):
+                pass
+            else:
+                print("An argument in an \"addCommand\" call is the wrong type. Expected float but recieved " + str(a) + " at args index " + str(b) + ".")
+                exit()
+            if expected_args[b] == 'int' and isinstance(a, int):
+                pass
+            else:
+                print("An argument in an \"addCommand\" call is the wrong type. Expected int but recieved " + str(a) + " at args index " + str(b) + ".")
+                exit()
+            if expected_args[b] == 'str' and isinstance(a, str):
+                pass
+            else:
+                print("An argument in an \"addCommand\" call is the wrong type. Expected str but recieved " + str(a) + " at args index " + str(b) + ".")
+                exit()
 
-    NOTE: There is an internal look-up table that maps a set of strings to integers, which can be substituted for any argument. E.g. instead of sending the command "motors_set_steps_per_unit: 3, 51200.0" you could send "motors_set_steps_per_unit: xaxis, 51200.0". The working list of substitutions is below:
-    "xaxis"  -> 1
-    "zaxis"  -> 0
-    "magnet  -> 3
-    "pump"   -> 2
-    "pinch1" -> 4
-    "pinch2" -> 5
-    "pinch3" -> 6
-    "pinch4" -> 7
 
-    There are also some commands that I use for debugging that I will leave undocumented for now:
-    set_assert_block
-    reboot
-    heap_high_watermark
-    state_dump
-    motors_write_reg
-    motors_read_reg
-    dummy
-    assert_fail
-    print("not yet implemented")
-    '''
+    file_name = "cmd.txt"
+    # retrieving cmd_id
+    cmd_id = 0
+    with open(file_name, 'a') as f:
+        for i, l in enumerate(f):
+            pass
+    cmd_id = i + 1
+
+    # setting init 
+    if cmd_id == 1:
+        print("Initializing cmd.txt")
+        cmd_id += 0 # change when you intialize the cmd.txt
+
+    # appending new command to cmd.txt
+    with open(file_name, 'a') as f:
+        f.write(str(cmd_id) + ":" + str(cmd) + ":" + ','.join(args))
+    return
+
 #-------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     aspirate()

@@ -1,4 +1,6 @@
 import sys
+import os
+import PyQt5
 from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication, QPushButton, QLabel, QButtonGroup, QHBoxLayout, QLabel, QMessageBox
 from PyQt5 import QtGui, QtWidgets, QtCore
 from PyQt5.QtGui import QImage, QPixmap, QColor
@@ -33,7 +35,7 @@ LIBRARIES = ["DNA-Seq", "RNA-Seq", "PG-Seq"]
 
 GREYED_STYLE = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 20px;\
@@ -44,7 +46,7 @@ GREYED_STYLE = "QPushButton { border-style: outset;\
                                                  border-color: gray}"
 GREYED_STYLE_UNCLICK = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 20px;\
@@ -89,7 +91,7 @@ SMALL_GREYED_STYLE = "QPushButton { border-style: outset;\
 
 GREEN_STYLE = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 20px;\
@@ -100,7 +102,7 @@ GREEN_STYLE = "QPushButton { border-style: outset;\
                                                  border-color: gray}"
 YELLOW_STYLE = "QPushButton {  border-style: outset;\
                                              border-width: 1px;\
-                                             border-radius: 7px;\
+                                             border-radius: 3px;\
                                              border-color: #363636;\
                                              padding: 4px;\
                                              font-size: 20px;\
@@ -111,7 +113,7 @@ YELLOW_STYLE = "QPushButton {  border-style: outset;\
                                                       border-color: gray}"
 RED_STYLE = "QPushButton {  border-style: outset;\
                                              border-width: 1px;\
-                                             border-radius: 7px;\
+                                             border-radius: 3px;\
                                              border-color: #363636;\
                                              padding: 4px;\
                                              font-size: 20px;\
@@ -156,7 +158,7 @@ RED_CIRCLE_STYLE = "QPushButton {    border-style: outset;\
                                                       border-color: gray}"
 BLUE_STYLE = "QPushButton {    border-style: outset;\
                                              border-width: 1px;\
-                                             border-radius: 7px;\
+                                             border-radius: 3px;\
                                              border-color: #363636;\
                                              padding: 4px;\
                                              font-size: 20px;\
@@ -206,6 +208,12 @@ BLUE_LIGHT_STYLE = "border-style: outset;\
                                              border-color: #363636;\
                                              padding: 10px;\
                                              background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #3399FF, stop:0.7 #287acc, stop:1 #2d89e5)}"
+GREEN_LIGHT_STYLE = "border-style: outset;\
+                                             border-width: 1px;\
+                                             border-radius: 15px;\
+                                             border-color: #363636;\
+                                             padding: 10px;\
+                                             background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #9AFF9A, stop:0.7 #5AB45A, stop:1 #60C260)}"
 GREY_LIGHT_STYLE = "border-style: outset;\
                                              border-width: 1px;\
                                              border-radius: 15px;\
@@ -329,7 +337,7 @@ YELLOW_LABELS = "QLabel {font: bold 18px;\
 
 UNCHECKED_GREY_BUTTON = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 20px;\
@@ -340,7 +348,7 @@ UNCHECKED_GREY_BUTTON = "QPushButton { border-style: outset;\
                                                  border-color: gray}"
 CHECK_BUTTON_STYLE = "QPushButton { border-style: outset;\
                                          border-width: 1px;\
-                                         border-radius: 7px;\
+                                         border-radius: 3px;\
                                          border-color: #363636;\
                                          padding: 4px;\
                                          font-size: 20px;\
@@ -422,6 +430,7 @@ class Window(QMainWindow):
         self.cartridge_button_style = [GREYED_STYLE, GREY_LABELS]
         self.reagent_button_style = [GREYED_STYLE_UNCLICK, GREY_LABELS]
 
+        self.library_apps = [["-",[],"grey",""]]
         
         self.time = WAIT
         self.timer = self.getTime()
@@ -432,6 +441,7 @@ class Window(QMainWindow):
 
     def initWindow(self):
         
+        self.loadScripts()
         self.setWindowIcon(QtGui.QIcon(self.icon_name))
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
@@ -442,6 +452,35 @@ class Window(QMainWindow):
         self.show()
 
 
+    def loadScripts(self):
+        app_path = "apps"
+        for (dirpath, dirnames, filenames) in os.walk(app_path):
+            filenames.sort()
+            for file in filenames:
+                name = ""
+                inputs = []
+                color = "yellow"
+                input_pass = True
+                if file != "theseus_utils.py":
+                    with open("apps/" + str(file), 'r') as f:
+                        lines = f.readlines()
+
+                        for l in lines:
+                            #print(l)
+                            k = l.split(":")
+                            if k[0] == '#NAME':
+                                name = k[1].split("\n")[0]
+                            elif k[0] == '#INPUTS':
+                                inputs = k[1].split("\n")[0].split(",")
+                                for i in inputs:
+                                    if i not in ["Genomic DNA", "10 uL Blood"]:
+                                        input_pass = False
+                            elif k[0] == '#COLOR':
+                                color = k[1].split("\n")[0]
+                if name != "" and input_pass:
+                    print(str([name,inputs,color,str("apps/"+str(file))]))
+                    self.library_apps.append([name,inputs,color,str("apps/"+str(file))])
+            
 
     def loadHomePanel(self):
         self.label = QLabel(self)
@@ -562,9 +601,8 @@ class Window(QMainWindow):
         self.combo_box1.setGeometry(QRect(80, 60, 200, 30))
         self.combo_box1.setObjectName("combo_box1")
         self.combo_box1.addItem("-")
-        self.combo_box1.addItem("DNA-Seq")
-        self.combo_box1.addItem("RNA-Seq")
-        self.combo_box1.addItem("PG-Seq")
+        for l in self.library_apps[1:]:
+            self.combo_box1.addItem(l[0])
         self.combo_box1.setStyleSheet(DROPDOWN)
 
         self.lib_label1 = QLabel(self.lib_widget1)
@@ -815,11 +853,17 @@ class Window(QMainWindow):
 
 
     def updateLight(self):
+        lights = {
+            "yellow": YELLOW_LIGHT_STYLE,
+            "blue": BLUE_LIGHT_STYLE,
+            "red": RED_LIGHT_STYLE,
+            "green": GREEN_LIGHT_STYLE
+        }
         if self.combo_box1.currentText() == "-":
             self.light_state1 = GREY_LIGHT_STYLE
             self.lib_widget2.hide()
-        else:
-            self.light_state1 = YELLOW_LIGHT_STYLE
+        else: 
+            self.light_state1 = lights[self.library_apps[self.combo_box1.currentIndex()][2]]
             self.lib_widget2.show()
         if self.combo_box2.currentText() == "Genomic DNA":
             self.light_state2 = BLUE_LIGHT_STYLE
