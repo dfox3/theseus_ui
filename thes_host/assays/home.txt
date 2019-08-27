@@ -1,0 +1,8 @@
+motors_home:zaxis
+motors_home:magnet
+motors_home:xaxis
+motors_home:pump
+motors_home:valve1
+motors_home:valve2
+motors_home:valve3
+motors_home:valve4

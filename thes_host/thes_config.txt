@@ -1,0 +1,116 @@
+# print out arbitrary strings during run
+print: theseus configuration
+
+# print the firmware version
+version
+
+# reboot the system to start off in the default state
+reboot
+
+# for debugging
+set_assert_block: 1
+
+# set the amount of information to print
+# 0 is most, more negative filters out more messages
+set_debug_level: 0
+
+# disable diagnostics reporting for now
+set_diagnostics_period: 0.0
+
+# high-voltage power supply parameters
+set_hvps_calibration: 500.0, 0.25, 1500.0, 5000.0
+
+# TEC thermocycler controller parameters
+#	   invert  kp     ti    windup   td   bb
+tec_parms: 1,  	   1.0,   10.0,  80.0,   0.0, 10.0
+
+# motor x-axis
+motors_set_direction:		xaxis, 0
+motors_set_steps_per_unit: 	xaxis, 51200.0
+motors_set_soft_limits:		xaxis, 0.0, 21.0
+motors_set_homing_params:	xaxis, 1.0, 1.0
+# sgt = 11 too low
+# sgt = 23 too high
+# sgt = 18
+motors_set_sgt:			xaxis, 18
+motors_set_max_current: 	xaxis, 0.0, 1.0, 0.15
+motors_set_motion_params:	xaxis, 0.0, 0.1, 5.0, 0.1, 5.0, 1.0, 1.0, 0.1
+
+# motor z-axis
+motors_set_direction:		zaxis, 1
+motors_set_steps_per_unit: 	zaxis, 51200.0
+motors_set_soft_limits:		zaxis, 0.0, 25.0
+motors_set_unsafe_zone:		zaxis, 11.0, xaxis
+motors_set_homing_params:	zaxis, 4.0, 2.0
+# sgt = 7  too low
+# sgt = 21 too high
+motors_set_sgt:			zaxis, 18
+motors_set_max_current: 	zaxis, 0.1, 1.0, 0.15
+motors_set_motion_params:	zaxis, 0.0, 0.1, 8.0, 0.1, 8.0, 1.0, 1.0, 0.1
+
+# motor magnet
+motors_set_direction:		magnet, 1
+motors_set_steps_per_unit: 	magnet, 51200.0
+motors_set_soft_limits:		magnet, 0.0, 100.0
+motors_set_homing_params:	magnet, 15.0, 5.0
+# sgt = 13 too low
+# sgt = 17 too high
+motors_set_sgt:			magnet, 15
+motors_set_max_current: 	magnet, 0.0, 0.5, 0.15
+motors_set_motion_params:	magnet, 0.0, 0.15, 15.0, 0.15, 15.0, 1.0, 1.0, 0.1
+
+# motor pump
+motors_set_direction:		pump, 1
+motors_set_steps_per_unit: 	pump, 51200.0
+motors_set_soft_limits:		pump, 0.0, 25.0
+motors_set_homing_params:	pump, 5.0, 2.0
+# sgt = 5 too low
+# sgt = 19 too high
+motors_set_sgt:			pump, 12
+motors_set_max_current: 	pump, 0.0, 1.0, 0.15
+motors_set_motion_params:	pump, 0.0, 0.1, 5.0, 0.1, 5.0, 1.0, 1.0, 0.1
+
+# motor valve1
+motors_set_direction:		valve1, 1
+motors_set_steps_per_unit: 	valve1, 51200.0
+motors_set_soft_limits:		valve1, -100.0, 100.0
+motors_set_homing_params:	valve1, 12.0, 2.0
+# sgt = 32 too low
+# sgt = 37 too high
+motors_set_sgt:			valve1, 35
+motors_set_max_current: 	valve1, 0.0, 0.75, 0.15
+motors_set_motion_params:	valve1, 0.0, 0.1, 15.0, 0.1, 15.0, 1.0, 1.0, 0.1
+
+# motor valve1
+motors_set_direction:		valve2, 1
+motors_set_steps_per_unit: 	valve2, 51200.0
+motors_set_soft_limits:		valve2, -100.0, 100.0
+motors_set_homing_params:	valve2, 12.0, 2.0
+# sgt = ? too low
+# sgt = ? too high
+motors_set_sgt:			valve2, 35
+motors_set_max_current: 	valve2, 0.0, 0.75, 0.15
+motors_set_motion_params:	valve2, 0.0, 0.1, 15.0, 0.1, 15.0, 1.0, 1.0, 0.1
+
+# motor valve1
+motors_set_direction:		valve3, 1
+motors_set_steps_per_unit: 	valve3, 51200.0
+motors_set_soft_limits:		valve3, -100.0, 100.0
+motors_set_homing_params:	valve3, 12.0, 2.0
+# sgt = ? too low
+# sgt = ? too high
+motors_set_sgt:			valve3, 35
+motors_set_max_current: 	valve3, 0.0, 0.75, 0.15
+motors_set_motion_params:	valve3, 0.0, 0.1, 15.0, 0.1, 15.0, 1.0, 1.0, 0.1
+
+# motor valve1
+motors_set_direction:		valve4, 1
+motors_set_steps_per_unit: 	valve4, 51200.0
+motors_set_soft_limits:		valve4, -100.0, 100.0
+motors_set_homing_params:	valve4, 12.0, 2.0
+# sgt = ? too low
+# sgt = ? too high
+motors_set_sgt:			valve4, 35
+motors_set_max_current: 	valve4, 0.0, 0.75, 0.15
+motors_set_motion_params:	valve4, 0.0, 0.1, 15.0, 0.1, 15.0, 1.0, 1.0, 0.1
+

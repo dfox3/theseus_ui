@@ -1,0 +1,700 @@
+# aspiration
+motors_set_position:	xaxis, 5000
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 10.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5010
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# pipetterMix
+motors_set_position:	xaxis, 5010
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 10.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5010
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 39.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5020
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# pipetterMix
+motors_set_position:	xaxis, 5020
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5020
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 1.0
+delay:	5
+motors_set_position:	pump, 50.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# incubate
+motors_set_position:	pump, 1000
+delay:	10
+motors_set_position:	valve1, 1
+motors_set_position:	valve2, 1
+motors_set_position:	valve3, 1
+motors_set_position:	valve4, 1
+delay:	10
+tec_run:	4.0, 60.0
+delay:	60.0
+
+# incubate
+tec_run:	35.0, 1080.0
+delay:	1080.0
+
+# incubate
+tec_run:	65.0, 1800.0
+delay:	1800.0
+
+# incubate
+tec_run:	4.0, 300.0
+delay:	300.0
+motors_set_position:	valve1, 0
+motors_set_position:	valve2, 0
+motors_set_position:	valve3, 0
+motors_set_position:	valve4, 0
+delay:	10
+motors_set_position:	pump, 50.0
+delay:	10
+
+# dispense
+motors_set_position:	xaxis, 5020
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 1.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5020
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 50.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5060
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5040
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 2.5
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5060
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5050
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 3.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5030
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# pipetterMix
+motors_set_position:	xaxis, 5060
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 44.5
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5060
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 1.0
+delay:	5
+motors_set_position:	pump, 100.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# incubate
+motors_set_position:	pump, 1000
+delay:	10
+motors_set_position:	valve1, 1
+motors_set_position:	valve2, 1
+motors_set_position:	valve3, 1
+motors_set_position:	valve4, 1
+delay:	10
+tec_run:	20.0, 900.0
+delay:	900.0
+
+# incubate
+tec_run:	4.0, 300.0
+delay:	300.0
+motors_set_position:	valve1, 0
+motors_set_position:	valve2, 0
+motors_set_position:	valve3, 0
+motors_set_position:	valve4, 0
+delay:	10
+motors_set_position:	pump, 100.0
+delay:	10
+
+# dispense
+motors_set_position:	xaxis, 5060
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 25.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# Bean cleanup not built yet*********
+# Bean cleanup not built yet*********
+# Bean cleanup not built yet*********
+
+# aspiration
+motors_set_position:	xaxis, 5140
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 1.0
+delay:	5
+motors_set_position:	pump, 23.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5150
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 10.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5170
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 1.0
+delay:	5
+motors_set_position:	pump, 2.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# dispense
+motors_set_position:	xaxis, 5150
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 10.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# pipetterMix
+motors_set_position:	xaxis, 5150
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 15.0
+delay:	2
+motors_set_position:	pump, 25.0
+delay:	2
+motors_set_position:	zaxis, 25.0
+delay:	2
+motors_set_position:	pump, 0.0
+delay:	2
+motors_set_position:	zaxis, 300
+delay:	5
+
+# aspiration
+motors_set_position:	xaxis, 5150
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 1.0
+delay:	5
+motors_set_position:	pump, 50.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# incubate
+motors_set_position:	pump, 1000
+delay:	10
+motors_set_position:	valve1, 1
+motors_set_position:	valve2, 1
+motors_set_position:	valve3, 1
+motors_set_position:	valve4, 1
+delay:	10
+tec_run:	98.0, 30.0
+delay:	30.0
+
+# thermalCycle
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+tec_run:	98, 15
+delay:	15
+tec_run:	65, 30
+delay:	30
+tec_run:	72, 30
+delay:	30
+
+# incubate
+tec_run:	72.0, 120.0
+delay:	120.0
+motors_set_position:	valve1, 0
+motors_set_position:	valve2, 0
+motors_set_position:	valve3, 0
+motors_set_position:	valve4, 0
+delay:	10
+motors_set_position:	pump, 50.0
+delay:	10
+
+# dispense
+motors_set_position:	xaxis, 5150
+delay:	10
+motors_set_motion_params:	zaxis, 0.0, 1.0, 0.0, 0.5, 0.0, -0.5, -1.0, 0.0
+motors_set_position:	zaxis, 10.0
+delay:	5
+motors_set_position:	pump, 0.0
+delay:	5
+motors_set_position:	zaxis, 300
+delay:	5
+
+# Bean cleanup not built yet*********
+# Bean cleanup not built yet*********
+# Bean cleanup not built yet*********
+

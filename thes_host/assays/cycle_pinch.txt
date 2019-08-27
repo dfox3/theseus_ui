@@ -1,0 +1,70 @@
+motors_home:valve1
+motors_home:valve2
+motors_home:valve3
+motors_home:valve4
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
+motors_set_position:valve1, 30
+motors_set_position:valve2, 30
+motors_set_position:valve3, 30
+motors_set_position:valve4, 30
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
+motors_set_position:valve1, 30
+motors_set_position:valve2, 30
+motors_set_position:valve3, 30
+motors_set_position:valve4, 30
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
+motors_set_position:valve1, 30
+motors_set_position:valve2, 30
+motors_set_position:valve3, 30
+motors_set_position:valve4, 30
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
+motors_set_position:valve1, 30
+motors_set_position:valve2, 30
+motors_set_position:valve3, 30
+motors_set_position:valve4, 30
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
+motors_set_position:valve1, 30
+motors_set_position:valve2, 30
+motors_set_position:valve3, 30
+motors_set_position:valve4, 30
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
+motors_set_position:valve1, 30
+motors_set_position:valve2, 30
+motors_set_position:valve3, 30
+motors_set_position:valve4, 30
+
+motors_set_position:valve1, 0
+motors_set_position:valve2, 0
+motors_set_position:valve3, 0
+motors_set_position:valve4, 0
+
